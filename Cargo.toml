@@ -1,0 +1,23 @@
+[package]
+name = "blc_rs"
+authors = ["Dan Buchholz <dbuchholz30@gmail.com>"]
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eth2 = { git = "https://github.com/sigp/lighthouse", branch = "stable" }
+sensitive_url = { git = "https://github.com/sigp/lighthouse", branch = "stable" }
+reqwest = { version = "0.11", features = ["json"]}
+serde = { version = "1.0", features = ["derive"] }
+serde_derive = "1.0.130"
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+
+[patch]
+[patch.crates-io]
+tree_hash = { git = "https://github.com/sigp/lighthouse", branch = "stable" }
+tree_hash_derive = { git = "https://github.com/sigp/lighthouse", branch = "stable" }
+eth2_ssz = { git = "https://github.com/sigp/lighthouse", branch = "stable" }
+eth2_ssz_derive = { git = "https://github.com/sigp/lighthouse", branch = "stable" }
+eth2_ssz_types = { git = "https://github.com/sigp/lighthouse", branch = "stable" }
+eth2_hashing = { git = "https://github.com/sigp/lighthouse", branch = "stable" }
