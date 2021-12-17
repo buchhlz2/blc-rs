@@ -402,7 +402,9 @@ dependencies = [
 name = "blc_rs"
 version = "0.1.0"
 dependencies = [
+ "bls",
  "eth2",
+ "eth2_serde_utils 0.1.0 (git+https://github.com/sigp/lighthouse?branch=stable)",
  "reqwest",
  "sensitive_url",
  "serde",
@@ -448,7 +450,7 @@ source = "git+https://github.com/sigp/lighthouse?branch=stable#fff01b24ddedcd544
 dependencies = [
  "blst",
  "eth2_hashing",
- "eth2_serde_utils",
+ "eth2_serde_utils 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "eth2_ssz",
  "ethereum-types 0.12.1",
  "hex",
@@ -1215,7 +1217,7 @@ dependencies = [
  "bytes 1.1.0",
  "eth2_keystore",
  "eth2_libp2p",
- "eth2_serde_utils",
+ "eth2_serde_utils 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "eth2_ssz",
  "eth2_ssz_derive",
  "futures",
@@ -1368,6 +1370,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "eth2_serde_utils"
+version = "0.1.0"
+source = "git+https://github.com/sigp/lighthouse?branch=stable#fff01b24ddedcd54486e374460855ca20d3dd232"
+dependencies = [
+ "hex",
+ "serde",
+ "serde_derive",
+]
+
+[[package]]
 name = "eth2_ssz"
 version = "0.4.0"
 source = "git+https://github.com/sigp/lighthouse?branch=stable#fff01b24ddedcd54486e374460855ca20d3dd232"
@@ -1392,7 +1404,7 @@ name = "eth2_ssz_types"
 version = "0.2.1"
 source = "git+https://github.com/sigp/lighthouse?branch=stable#fff01b24ddedcd54486e374460855ca20d3dd232"
 dependencies = [
- "eth2_serde_utils",
+ "eth2_serde_utils 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "eth2_ssz",
  "serde",
  "serde_derive",
@@ -5165,7 +5177,7 @@ dependencies = [
  "derivative",
  "eth2_hashing",
  "eth2_interop_keypairs",
- "eth2_serde_utils",
+ "eth2_serde_utils 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "eth2_ssz",
  "eth2_ssz_derive",
  "eth2_ssz_types",
